@@ -1,0 +1,6 @@
+﻿services:
+  dealw:
+    image: dealw
+    build:
+      context: .
+      dockerfile: DealW/Dockerfile
