@@ -37,7 +37,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -156,7 +156,7 @@
       <workItem from="1725459338607" duration="982000" />
       <workItem from="1732566360799" duration="1381000" />
       <workItem from="1732571206341" duration="69000" />
-      <workItem from="1732571295946" duration="989000" />
+      <workItem from="1732571295946" duration="1351000" />
     </task>
     <servers />
   </component>
