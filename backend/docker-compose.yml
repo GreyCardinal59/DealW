@@ -1,6 +1,22 @@
 ﻿services:
-  dealw:
-    image: dealw
-    build:
-      context: .
-      dockerfile: DealW/Dockerfile
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: "dealwdb"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "5959"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5433"
+  
+  #  dealw:
+  #    image: dealw
+  #    build:
+  #      context: .
+  #      dockerfile: DealW/Dockerfile
+  
+volumes:
+  postgres-data:
+
