@@ -1,6 +1,6 @@
 namespace DealW.Contracts;
 
 public record QuizzesResponse(
-    Guid id,
+    int id,
     string title,
-    IList<string> questions);
+    string difficulty);

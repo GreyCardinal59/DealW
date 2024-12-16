@@ -1,4 +1,5 @@
 using DealW.Application.Services;
+using DealW.Domain.Abstractions;
 using DealW.Persistence;
 using DealW.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,8 @@ builder.Services.AddDbContext<DealWDbContext>(
 
 builder.Services.AddScoped<IQuizzesService, QuizzesService>();
 builder.Services.AddScoped<IQuizzesRepository, QuizzesRepository>();
+builder.Services.AddScoped<IQuestionsService, QuestionsService>();
+builder.Services.AddScoped<IQuestionsRepository, QuestionsRepository>();
 
 var app = builder.Build();
 

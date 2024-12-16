@@ -3,13 +3,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DealW.Persistence;
 
-public class DealWDbContext : DbContext
+public class DealWDbContext(DbContextOptions<DealWDbContext> options) : DbContext(options)
 {
-    public DealWDbContext(DbContextOptions<DealWDbContext> options)
-        : base(options)
-    {
-        
-    }
-    
     public DbSet<QuizEntity> Quizzes { get; set; }
+    public DbSet<QuestionEntity> Questions { get; set; }
+    // public DbSet<Answer> Answers { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<QuestionEntity>()
+            .HasOne(q => q.Quiz)
+            .WithMany(q => q.Questions)
+            .HasForeignKey(q => q.QuizId);
+    }
 }

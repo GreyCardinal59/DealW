@@ -15,7 +15,7 @@ internal class QuizConfiguration : IEntityTypeConfiguration<QuizEntity>
             .HasMaxLength(Quiz.MAX_TITLE_LENGHT)
             .IsRequired();
         
-        builder.Property(q => q.Questions)
+        builder.Property(q => q.Difficulty)
             .IsRequired();
     }
 }

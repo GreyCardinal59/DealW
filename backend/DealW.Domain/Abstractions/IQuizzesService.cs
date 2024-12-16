@@ -1,11 +1,11 @@
 using DealW.Domain.Models;
 
-namespace DealW.Application.Services;
+namespace DealW.Domain.Abstractions;
 
 public interface IQuizzesService
 {
     Task<List<Quiz>> GetAllQuizzes();
-    Task<Guid> CreateQuiz(Quiz quiz);
-    Task<Guid> UpdateQuiz(Guid id, string title, IList<string> questions);
-    Task<Guid> DeleteQuiz(Guid id);
+    Task<int> CreateQuiz(Quiz quiz);
+    Task<int> UpdateQuiz(int id, string title, string difficulty);
+    Task<int> DeleteQuiz(int id);
 }

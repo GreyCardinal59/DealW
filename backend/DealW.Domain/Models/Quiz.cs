@@ -3,17 +3,20 @@ namespace DealW.Domain.Models;
 public class Quiz
 {
     public const int MAX_TITLE_LENGHT = 250;
-    private Quiz(Guid id, string title, IList<string> questions)
+    private Quiz(int id, string title, string difficulty)
     {
         Id = id;
         Title = title;
-        Questions = questions;
+        Difficulty = difficulty;
     }
-    public Guid Id { get; }
+    
+    public int Id { get; }
     public string Title { get; }
-    public IList<string> Questions { get; }
+    public string Difficulty { get; }
+    
+    public virtual ICollection<Question> Questions { get; }
 
-    public static (Quiz Quiz, string Error) Create(Guid id, string title, IList<string> questions)
+    public static (Quiz Quiz, string Error) Create(int id, string title, string difficulty)
     {
         var error = string.Empty;
     
@@ -21,7 +24,7 @@ public class Quiz
         {
             error = "Title can't be empty or longer than 250 symbols";
         }
-        var quiz = new Quiz(id, title, questions);
+        var quiz = new Quiz(id, title, difficulty);
     
         return (quiz, error);
     }

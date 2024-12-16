@@ -1,11 +1,11 @@
 using DealW.Domain.Models;
 
-namespace DealW.Persistence.Repositories;
+namespace DealW.Domain.Abstractions;
 
 public interface IQuizzesRepository
 {
     Task<List<Quiz>> Get();
-    Task<Guid> Create(Quiz quiz);
-    Task<Guid> Update(Guid id, string title, IList<string> questions);
-    Task<Guid> Delete(Guid id);
+    Task<int> Create(Quiz quiz);
+    Task<int> Update(int id, string title, string difficulty);
+    Task<int> Delete(int id);
 }

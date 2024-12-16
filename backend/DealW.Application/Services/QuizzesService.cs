@@ -1,34 +1,27 @@
+using DealW.Domain.Abstractions;
 using DealW.Domain.Models;
-using DealW.Persistence.Repositories;
 
 namespace DealW.Application.Services;
 
-public class QuizzesService : IQuizzesService
+public class QuizzesService(IQuizzesRepository quizzesRepository) : IQuizzesService
 {
-    private readonly IQuizzesRepository _quizzesRepository;
-    
-    public QuizzesService(IQuizzesRepository quizzesRepository)
-    {
-        _quizzesRepository = quizzesRepository;
-    }
-
     public async Task<List<Quiz>> GetAllQuizzes()
     {
-        return await _quizzesRepository.Get();
+        return await quizzesRepository.Get();
     }
 
-    public async Task<Guid> CreateQuiz(Quiz quiz)
+    public async Task<int> CreateQuiz(Quiz quiz)
     {
-        return await _quizzesRepository.Create(quiz);
+        return await quizzesRepository.Create(quiz);
     }
 
-    public async Task<Guid> UpdateQuiz(Guid id, string title, IList<string> questions)
+    public async Task<int> UpdateQuiz(int id, string title, string difficulty)
     {
-        return await _quizzesRepository.Update(id, title, questions);
+        return await quizzesRepository.Update(id, title, difficulty);
     }
 
-    public async Task<Guid> DeleteQuiz(Guid id)
+    public async Task<int> DeleteQuiz(int id)
     {
-        return await _quizzesRepository.Delete(id);
+        return await quizzesRepository.Delete(id);
     }
 }

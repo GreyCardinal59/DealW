@@ -11,41 +11,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954a1549-a923-4db8-a5c6-c0de7836d193" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DealW/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DealW/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DealW/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DealW/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/DealW.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/DealW.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.API/Contracts/QuizzesRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/Contracts/QuizzesRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.API/Contracts/QuizzesResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/Contracts/QuizzesResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.API/Controllers/QuizzesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/Controllers/QuizzesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/ref/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/ref/DealW.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/refint/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/refint/DealW.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Application/Services/QuizzesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Application/Services/QuizzesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuizzesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuizzesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuizzesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuizzesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Models/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Models/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Models/Quiz.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Models/Quiz.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Configurations/QuizConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Configurations/QuizConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/DealWDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/DealWDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Entities/QuizEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Entities/QuizEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20241126134330_init.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20241126134330_init.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/DealWDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Repositories/QuizzesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Repositories/QuizzesRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,24 +72,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.DealW: IIS Express.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.DealW: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.DealW: http.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.DealW: IIS Express">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.DealW: http">
     <configuration name="DealW: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DealW.API/DealW.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -208,7 +206,13 @@
       <workItem from="1732571295946" duration="1351000" />
       <workItem from="1732573512298" duration="1113000" />
       <workItem from="1732577512257" duration="274000" />
-      <workItem from="1732577804752" duration="22688000" />
+      <workItem from="1732577804752" duration="23985000" />
+      <workItem from="1733254530652" duration="3722000" />
+      <workItem from="1733348319011" duration="3576000" />
+      <workItem from="1733773160444" duration="1209000" />
+      <workItem from="1733783399919" duration="9797000" />
+      <workItem from="1733859355897" duration="19540000" />
+      <workItem from="1734198916194" duration="14253000" />
     </task>
     <servers />
   </component>
@@ -217,6 +221,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
