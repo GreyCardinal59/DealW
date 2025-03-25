@@ -4,8 +4,9 @@ import { Menu } from "antd";
 import Link from "next/link";
 
 const items = [
-  {key: "home", label: <Link href={"/"}>Home</Link>},
-  {key: "quizzes", label: <Link href={"/quizzes"}>Quizzes</Link>},
+  {key: "home", label: <Link href={"/"}>Главная</Link>},
+  {key: "theory", label: <Link href={"/theory"}>Теория</Link>},
+  {key: "quizzes", label: <Link href={"/quizzes"}>Квизы</Link>},
 ];
 
 export default function RootLayout({
@@ -22,12 +23,12 @@ export default function RootLayout({
                 theme ="dark" 
                 mode="horizontal" 
                 items = {items} 
-                style= {{flex: 1, minWidth: 0}}
+                style= {{flex: 1, minWidth: 0, justifyContent: "center"}}
             />
           </Header>
           <Content style={{padding: "0 48px"}}>{children}</Content>
           <Footer style={{textAlign: "center"}}>
-            DealW 2024 by Grey Cardinal
+            DealW 2024 by LAMENT & Grey Cardinal
           </Footer>
         </Layout>
       </body>

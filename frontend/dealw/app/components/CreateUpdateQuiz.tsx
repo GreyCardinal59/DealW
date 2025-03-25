@@ -27,13 +27,9 @@ export const CreateUpdateQuiz = ({
     handleUpdate,
 }: Props) => {
     const [title, setTitle] = useState<string>("");
-    // const [description, setDescription] = useState<string>("");
-    // const [price, setPrice = useState<number>(1);
 
     useEffect(() => {
         setTitle(values.title);
-        // setDescription(values.description);
-        // setPrice(values.price);
     }, [values]);
 
     const handleOnOk = async () => {
@@ -60,17 +56,6 @@ export const CreateUpdateQuiz = ({
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="Название"
                 />
-                 {/* <TextArea
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    autoSize={{minRows: 3, maxRows: 3 }}
-                    placeholder="Описание"
-                />
-                 <Input
-                    value={price}
-                    onChange={(e) => setPrice(Number(e.target.value)}
-                    placeholder="Цена"
-                /> */}
             </div>
         </Modal>
     );

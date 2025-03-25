@@ -3,13 +3,20 @@ export interface QuizRequest {
 }
 
 export const getAllQuizzes = async () => {
-    const response = await fetch("http://localhost:5059/Quizzes");
-
-    return response.json();
+    try {
+        const response = await fetch("http://localhost:3000/quizzes");
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Failed to fetch quizzes:", error);
+        throw error;
+    }
 };
 
 export const createQuiz = async (quizRequest: QuizRequest) => {
-    await fetch("http://localhost:5059/Quizzes", {
+    await fetch("http://localhost:3000/quizzes", {
         method: "POST",
         headers: {
             "content-type": "application/json",
@@ -19,7 +26,7 @@ export const createQuiz = async (quizRequest: QuizRequest) => {
 };
 
 export const updateQuiz = async (id: string, quizRequest: QuizRequest) => {
-    await fetch(`http://localhost:5059/Quizzes/${id}`, {
+    await fetch(`http://localhost:3000/quizzes/${id}`, {
         method: "PUT",
         headers: {
             "content-type": "application/json",
@@ -29,7 +36,8 @@ export const updateQuiz = async (id: string, quizRequest: QuizRequest) => {
 };
 
 export const deleteQuiz = async (id: string) => {
-    await fetch(`http://localhost:5059/Quizzes/${id}`, {
+    await fetch(`http://localhost:3000/quizzes/${id}`, {
         method: "DELETE",
     });
 };
+

@@ -10,31 +10,31 @@ interface Props {
 
 export const Quizzes = ({ quizzes, handleDelete, handleOpen }: Props) => {
     return (
-        <div className="cards">
-            {quizzes.map((quiz : Quiz) => (
-                <Card 
-                    key={quiz.id} 
-                    title={<CardTitle title={quiz.title} />} 
-                    bordered={false}
-                >
-                    <p>{quiz.title}</p>
-                    <div className="card_buttons">
-                        <Button 
-                            onClick={() => handleOpen(quiz)}
-                            style ={{ flex: 1 }}
-                        >
-                            Редактировать
-                        </Button>
-                        <Button
-                            onClick={() => handleDelete(quiz.id)}
-                            danger
-                            style= {{ flex: 1 }}
-                        >
-                            Удалить
-                        </Button>
-                    </div>
-                </Card>
-            ))}
-        </div>
+        // <div className="cards">
+        //     {quizzes.map((quiz : Quiz) => (
+        //         <Card 
+        //             key={quiz.id} 
+        //             title={<CardTitle title={quiz.title} />} 
+        //             bordered={false}
+        //         >
+        //             <p>{quiz.title}</p>
+        //             <div className="card_buttons">
+        //                 <Button 
+        //                     onClick={() => handleOpen(quiz)}
+        //                     style ={{ flex: 1 }}
+        //                 >
+        //                     Редактировать
+        //                 </Button>
+        //                 <Button
+        //                     onClick={() => handleDelete(quiz.id)}
+        //                     danger
+        //                     style= {{ flex: 1 }}
+        //                 >
+        //                     Удалить
+        //                 </Button>
+        //             </div>
+        //         </Card>
+        //     ))}
+        // </div>
     );
 };
