@@ -26,6 +26,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DealW.Application\DealW.Application.csproj" />
+      <ProjectReference Include="..\DealW.Infrastructure\DealW.Infrastructure.csproj" />
       <ProjectReference Include="..\DealW.Persistence\DealW.Persistence.csproj" />
     </ItemGroup>
 

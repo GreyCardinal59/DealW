@@ -7,6 +7,8 @@ namespace DealW.Persistence.Repositories;
 
 public class QuizzesRepository(DealWDbContext context) : IQuizzesRepository
 {
+    //TODO add mapper
+    
     public async Task<List<Quiz>> Get()
     {
         var quizEntities = await context.Quizzes

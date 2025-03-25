@@ -1,9 +1,15 @@
+using System.Runtime.CompilerServices;
 using DealW.Application.Services;
 using DealW.Contracts;
 using DealW.Domain.Abstractions;
+using DealW.Domain.Enums;
 using DealW.Domain.Models;
+using DealW.Infrastructure;
+using DealW.Infrastructure.Authentication;
 using DealW.Persistence.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using AuthorizationOptions = DealW.Persistence.AuthorizationOptions;
 
 namespace DealW.Controllers;
 
@@ -12,6 +18,7 @@ namespace DealW.Controllers;
 public class QuizzesController(IQuizzesService quizzesService, IQuestionsRepository questionsRepository) : ControllerBase
 {
     [HttpGet]
+    [RequirePermissions(Permission.Read)]
     public async Task<ActionResult<List<QuizzesResponse>>> GetQuizzes()
     {
         
@@ -52,8 +59,9 @@ public class QuizzesController(IQuizzesService quizzesService, IQuestionsReposit
     {
         return Ok(await quizzesService.DeleteQuiz(id));
     }
-
+    
     [HttpGet("{id:int}")]
+    [RequirePermissions(Permission.Read, Permission.Create, Permission.Update, Permission.Delete)]
     public async Task<ActionResult<List<QuestionResponse>>> GetQuestionsByQuizId(int id)
     {
         var questions = await questionsRepository.GetByQuizId(id);

@@ -19,6 +19,8 @@ public class QuestionsRepository(DealWDbContext context) : IQuestionsRepository
     //     
     //     return questions;
     // }
+    
+    //TODO add mapper
 
     public async Task<List<Question>> GetByQuizId(int quizId)
     {

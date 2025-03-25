@@ -140,3 +140,15 @@ D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.W
 D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\AutoMapper.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\DealW.Infrastructure.dll
+D:\Projects\DealW\backend\DealW.API\bin\Debug\net8.0\DealW.Infrastructure.pdb
