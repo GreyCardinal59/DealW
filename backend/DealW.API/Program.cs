@@ -32,8 +32,12 @@ services.AddDbContext<DealWDbContext>(
         options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(DealWDbContext)));
     });
 
-services.AddScoped<IQuizzesService, QuizzesService>();
-services.AddScoped<IQuizzesRepository, QuizzesRepository>();
+services.AddScoped<IDuelsService, DuelsService>();
+services.AddScoped<IDuelsRepository, DuelsRepository>();
+
+services.AddScoped<IAnswerService, AnswersService>();
+services.AddScoped<IAnswersRepository, AnswersRepository>();
+
 services.AddScoped<IQuestionsService, QuestionsService>();
 services.AddScoped<IQuestionsRepository, QuestionsRepository>();
 
@@ -43,7 +47,7 @@ services.AddScoped<UsersService>();
 services.AddScoped<IJwtProvider, JwtProvider>();
 services.AddScoped<IPasswordHasher, PasswordHasher>();
 
-services.AddAutoMapper(typeof(DataBaseMappings));
+services.AddAutoMapper(typeof(DataBaseMappings).Assembly);
 
 var app = builder.Build();
 
@@ -64,7 +68,6 @@ app.UseCors(x =>
 });
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();

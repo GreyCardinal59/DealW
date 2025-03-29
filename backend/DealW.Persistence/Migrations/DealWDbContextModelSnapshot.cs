@@ -22,6 +22,92 @@ namespace DealW.Persistence.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("DealW.Persistence.Entities.AnswerEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DuelQuestionId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("UserAnswer")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("character varying(250)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DuelQuestionId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Answers");
+                });
+
+            modelBuilder.Entity("DealW.Persistence.Entities.DuelEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("User1Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("User2Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("WinnerId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("User1Id");
+
+                    b.HasIndex("User2Id");
+
+                    b.ToTable("Duels");
+                });
+
+            modelBuilder.Entity("DealW.Persistence.Entities.DuelQuestionEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DuelId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DuelId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("DuelQuestions");
+                });
+
             modelBuilder.Entity("DealW.Persistence.Entities.PermissionEntity", b =>
                 {
                     b.Property<int>("Id")
@@ -69,11 +155,10 @@ namespace DealW.Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CorrectAnswerId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("QuizId")
-                        .HasColumnType("integer");
+                    b.Property<string>("CorrectAnswer")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("character varying(250)");
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -82,31 +167,7 @@ namespace DealW.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("QuizId");
-
                     b.ToTable("Questions");
-                });
-
-            modelBuilder.Entity("DealW.Persistence.Entities.QuizEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Difficulty")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Quizzes");
                 });
 
             modelBuilder.Entity("DealW.Persistence.Entities.RoleEntity", b =>
@@ -151,33 +212,6 @@ namespace DealW.Persistence.Migrations
                     b.HasIndex("PermissionId");
 
                     b.ToTable("RolePermissionEntity");
-
-                    b.HasData(
-                        new
-                        {
-                            RoleId = 1,
-                            PermissionId = 2
-                        },
-                        new
-                        {
-                            RoleId = 1,
-                            PermissionId = 1
-                        },
-                        new
-                        {
-                            RoleId = 1,
-                            PermissionId = 3
-                        },
-                        new
-                        {
-                            RoleId = 1,
-                            PermissionId = 4
-                        },
-                        new
-                        {
-                            RoleId = 2,
-                            PermissionId = 1
-                        });
                 });
 
             modelBuilder.Entity("DealW.Persistence.Entities.UserEntity", b =>
@@ -218,15 +252,61 @@ namespace DealW.Persistence.Migrations
                     b.ToTable("UserRoleEntity");
                 });
 
-            modelBuilder.Entity("DealW.Persistence.Entities.QuestionEntity", b =>
+            modelBuilder.Entity("DealW.Persistence.Entities.AnswerEntity", b =>
                 {
-                    b.HasOne("DealW.Persistence.Entities.QuizEntity", "Quiz")
-                        .WithMany("Questions")
-                        .HasForeignKey("QuizId")
+                    b.HasOne("DealW.Persistence.Entities.DuelQuestionEntity", "DuelQuestion")
+                        .WithMany("Answers")
+                        .HasForeignKey("DuelQuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Quiz");
+                    b.HasOne("DealW.Persistence.Entities.UserEntity", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DuelQuestion");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DealW.Persistence.Entities.DuelEntity", b =>
+                {
+                    b.HasOne("DealW.Persistence.Entities.UserEntity", "Player1")
+                        .WithMany()
+                        .HasForeignKey("User1Id")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("DealW.Persistence.Entities.UserEntity", "Player2")
+                        .WithMany()
+                        .HasForeignKey("User2Id")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Player1");
+
+                    b.Navigation("Player2");
+                });
+
+            modelBuilder.Entity("DealW.Persistence.Entities.DuelQuestionEntity", b =>
+                {
+                    b.HasOne("DealW.Persistence.Entities.DuelEntity", "Duel")
+                        .WithMany("Questions")
+                        .HasForeignKey("DuelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DealW.Persistence.Entities.QuestionEntity", "Question")
+                        .WithMany("DuelQuestions")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Duel");
+
+                    b.Navigation("Question");
                 });
 
             modelBuilder.Entity("DealW.Persistence.Entities.RolePermissionEntity", b =>
@@ -259,9 +339,19 @@ namespace DealW.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DealW.Persistence.Entities.QuizEntity", b =>
+            modelBuilder.Entity("DealW.Persistence.Entities.DuelEntity", b =>
                 {
                     b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("DealW.Persistence.Entities.DuelQuestionEntity", b =>
+                {
+                    b.Navigation("Answers");
+                });
+
+            modelBuilder.Entity("DealW.Persistence.Entities.QuestionEntity", b =>
+                {
+                    b.Navigation("DuelQuestions");
                 });
 #pragma warning restore 612, 618
         }

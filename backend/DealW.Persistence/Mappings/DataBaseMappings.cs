@@ -10,5 +10,8 @@ public class DataBaseMappings : Profile
     {
         //TODO add another mappings
         CreateMap<UserEntity, User>();
+        CreateMap<DuelEntity, Duel>();
+        CreateMap<QuestionEntity, Question>();
+        CreateMap<AnswerEntity, Answer>();
     }
 }

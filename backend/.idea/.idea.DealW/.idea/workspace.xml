@@ -15,56 +15,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954a1549-a923-4db8-a5c6-c0de7836d193" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DealW.Application/Services/AnswersService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Application/Services/DuelsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Repositories/IAnswersRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Repositories/IDuelsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Repositories/IQuestionsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Services/IAnswerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Services/IDuelsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Services/IQuestionsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Enums/DuelStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Domain/Models/DuelQuestion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Persistence/Configurations/AnswerConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Persistence/Configurations/DuelQuestionConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Persistence/Entities/AnswerEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Persistence/Entities/DuelQuestionEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DealW.Persistence/Repositories/AnswersRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DealW/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DealW/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.API/Contracts/QuizzesRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/Contracts/QuizzesRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/Controllers/QuizzesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/Controllers/QuizzesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/DealW.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/DealW.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/DealW.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/bin/Debug/net8.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/DealW.API.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/DealW.API.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/ref/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/ref/DealW.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/refint/DealW.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/Debug/net8.0/refint/DealW.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.Domain/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Application/Services/QuestionsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Application/Services/QuestionsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Application/Services/QuizzesService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IPermissionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Services/IPermissionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuestionsRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuestionsService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuizzesRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IQuizzesService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Services/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Abstractions/IUsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Abstractions/Repositories/IUsersRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Models/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Models/Answer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Models/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Models/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Domain/Models/Quiz.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Domain/Models/Duel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Configurations/QuestionConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Configurations/QuestionConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Configurations/QuizConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Configurations/DuelConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.Persistence/DealW.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/DealW.Persistence.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.Persistence/DealWDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/DealWDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20241210203629_init.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20241210203629_init.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20241214204521_updinit.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20241214204521_updinit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Entities/QuestionEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Entities/QuestionEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Entities/QuizEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Entities/DuelEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Mappings/DataBaseMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Mappings/DataBaseMappings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312093455_init.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312093455_init.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312094001_init2.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312094001_init2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312094045_init3.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312094045_init3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312101406_init4.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/20250312101406_init4.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.Persistence/Migrations/DealWDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DealW.Persistence/Repositories/QuestionsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Repositories/QuestionsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Repositories/QuizzesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Repositories/QuizzesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealW.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/Models/Quiz.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/Models/Quiz.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/components/Cardtitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/components/Cardtitle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/components/CreateUpdateQuiz.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/components/CreateUpdateQuiz.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/components/Quizzes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/components/Quizzes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/quizzes/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/quizzes/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/dealw/app/services/quizzes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/dealw/app/services/quizzes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Repositories/QuizzesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Repositories/DuelsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DealW.Persistence/Repositories/UsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DealW.Persistence/Repositories/UsersRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +99,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5abecb93434c4299acd01d522fdf8da2c9a910/bc/0578cde9/IEnumerable`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f890eac26bc448e6a309cfea13eca4af381910/96/99957fe2/IQueryable`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/36f346b6c0454bc8a6afa7aed38119fe5bbffcc983298d9bfa4dbd5f49461f/Monitor.CoreCLR.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f90c6c13479b8c2a5be98f3d75dfc3bd885a055652d8a32904ca2448132949e/Future.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b5ce248cd9a8b3be41a6e24dd1d2bb7466ae3aab2f3ba3c8f56ec6a5aa30c06d/InferParameterBindingInfoConvention.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DealW.Application/Services/DuelsService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DealW.Domain/Abstractions/IDuelsRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DealW.Infrastructure/Authentication/PermissionAuthorizationHandler.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;35385fc91c43c41c8bb5a149541ec2745b348750&quot; value=&quot;###&amp;#10;DELETE http://localhost:5059/Quizzes/{{id}}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -117,7 +139,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.build",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -321,7 +343,7 @@
       <workItem from="1741335585942" duration="73284000" />
       <workItem from="1741875896105" duration="689000" />
       <workItem from="1741876660143" duration="21213000" />
-      <workItem from="1742631715225" duration="15845000" />
+      <workItem from="1742631715225" duration="66599000" />
     </task>
     <servers />
   </component>

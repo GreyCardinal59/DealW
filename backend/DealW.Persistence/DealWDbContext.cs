@@ -8,13 +8,14 @@ namespace DealW.Persistence;
 public class DealWDbContext(DbContextOptions<DealWDbContext> options,
     IOptions<AuthorizationOptions> authOptions) : DbContext(options)
 {
-    public DbSet<QuizEntity> Quizzes { get; set; }
+    public DbSet<DuelEntity> Duels { get; set; }
+    public DbSet<DuelQuestionEntity> DuelQuestions { get; set; }
     public DbSet<QuestionEntity> Questions { get; set; }
-    
+
+    public DbSet<AnswerEntity> Answers { get; set; }
     public DbSet<UserEntity> Users { get; set; }
     
     public DbSet<RoleEntity> Roles { get; set; }
-    // public DbSet<Answer> Answers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,9 +23,14 @@ public class DealWDbContext(DbContextOptions<DealWDbContext> options,
         
         modelBuilder.ApplyConfiguration(new RolePermissionConfiguration(authOptions.Value));
         
-        modelBuilder.Entity<QuestionEntity>()
-            .HasOne(q => q.Quiz)
-            .WithMany(q => q.Questions)
-            .HasForeignKey(q => q.QuizId);
+        modelBuilder.ApplyConfiguration(new DuelConfiguration());
+        modelBuilder.ApplyConfiguration(new DuelQuestionConfiguration());
+        modelBuilder.ApplyConfiguration(new QuestionConfiguration());
+        modelBuilder.ApplyConfiguration(new AnswerConfiguration());
+        
+        // modelBuilder.Entity<QuestionEntity>()
+        //     .HasOne(q => q.Quiz)
+        //     .WithMany(q => q.Questions)
+        //     .HasForeignKey(q => q.QuizId);
     }
 }

@@ -2,32 +2,16 @@ namespace DealW.Domain.Models;
 
 public class Question
 {
-    private Question(int id, int quizId, string text, int correctAnswerId)
+    private Question(string text, string correctAnswer)
     {
-        Id = id;
-        QuizId = quizId;
+        // Id = id;
         Text = text;
-        CorrectAnswerId = correctAnswerId;
+        CorrectAnswer = correctAnswer;
     }
-    public int Id { get; }
-    public int QuizId { get; }
-    public string Text { get; }
-    public int CorrectAnswerId { get; }
+    public int Id { get; set; }
+    public string Text { get; set; }
+    public string CorrectAnswer { get; set; }
+    // public string TestCases { get; set; } // JSON
     
-    public virtual Quiz Quiz { get; }
-    // public virtual ICollection<Answer> Answers { get; }
-    
-    public static (Question Question, string Error) Create(int id, int quizId, string text, int correctAnswerId)
-    {
-        var error = string.Empty;
-    
-        if (string.IsNullOrEmpty(text))
-        {
-            error = "Question text can't be empty.";
-        }
-        
-        var question = new Question(0, quizId, text, correctAnswerId);
-    
-        return (question, error);
-    }
+    // TODO: add QuestionType property for different question types, like MultipleChoice or TextInput (enum)
 }

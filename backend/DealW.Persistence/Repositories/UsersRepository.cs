@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DealW.Persistence.Repositories;
 
-public class UsersRepository(DealWDbContext context, IMapper mapper) : IUsersRepository
+public class UsersRepository(DealWDbContext _context, IMapper _mapper) : IUsersRepository
 {
     //TODO add mapper
     public async Task Add(User user)
     {
         // Хардкод для проверки разрешений
-        var roleEntity = await context.Roles
+        var roleEntity = await _context.Roles
             .SingleOrDefaultAsync(r => r.Id == (int)Role.Admin)
                          ?? throw new InvalidOperationException();
         
-        var userEntity = new UserEntity()
+        var userEntity = new UserEntity
         {
             Id = user.Id,
             UserName = user.UserName,
@@ -26,22 +26,22 @@ public class UsersRepository(DealWDbContext context, IMapper mapper) : IUsersRep
             Roles = [roleEntity]
         };
 
-        await context.Users.AddAsync(userEntity);
-        await context.SaveChangesAsync();
+        await _context.Users.AddAsync(userEntity);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<User> GetByEmail(string email)
     {
-        var userEntity = await context.Users
+        var userEntity = await _context.Users
             .AsNoTracking()
             .FirstOrDefaultAsync(u => u.Email == email) ?? throw new Exception();
         
-        return mapper.Map<User>(userEntity);
+        return _mapper.Map<User>(userEntity);
     }
     
     public async Task<HashSet<Permission>> GetUserPermissions(Guid userId)
     {
-        var roles = await context.Users
+        var roles = await _context.Users
             .AsNoTracking()
             .Include(u => u.Roles)
             .ThenInclude(r => r.Permissions)

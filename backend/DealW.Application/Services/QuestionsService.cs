@@ -5,28 +5,23 @@ namespace DealW.Application.Services;
 
 public class QuestionsService(IQuestionsRepository questionsRepository) : IQuestionsService
 {
-    // public async Task<List<Question>> GetAllQuestions()
-    // {
-    //     return await questionsRepository.Get();
-    // }
-
-    public async Task<List<Question>> GetByQuizId(int quizId)
+    public Task<Question> CreateQuestionAsync(string questionText, string correctAnswer, string? category = null)
     {
-        return await questionsRepository.GetByQuizId(quizId);
+        throw new NotImplementedException();
     }
 
-    public async Task<int> CreateQuestion(Question question)
+    public Task<Question> GetQuestionAsync(int questionId)
     {
-        return await questionsRepository.Create(question);
+        throw new NotImplementedException();
     }
 
-    public async Task<int> UpdateQuestion(int id, string text, int correctAnswer)
+    public Task<IEnumerable<Question>> GetAllQuestionsAsync()
     {
-        return await questionsRepository.Update(id, text, correctAnswer);
+        throw new NotImplementedException();
     }
 
-    public async Task<int> DeleteQuestion(int id)
+    public Task DeleteQuestionAsync(int questionId)
     {
-        return await questionsRepository.Delete(id);
+        throw new NotImplementedException();
     }
 }
